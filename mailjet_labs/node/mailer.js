@@ -1,8 +1,6 @@
-const dotenv = require('dotenv');
 const nodemailer = require('nodemailer');
 const fs = require('fs').promises;
 const path = require('path');
-dotenv.config()
 
 const getSystemCredentials = () => {
     return {
