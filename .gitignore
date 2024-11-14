@@ -1,2 +1,4 @@
 node_modules/
 */venv/
+docker_labs/node_modules/
+cron_jobs/cron_log.txt
