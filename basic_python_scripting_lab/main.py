@@ -18,7 +18,7 @@ if not os.path.exists(download_folder):
     os.makedirs(download_folder)
     print(f"Directory: {download_folder} created.")
 
-local_file_path = os.path.join(download_folder, "john_doe.txt")
+local_file_path = os.path.join(download_folder, "christian_solomon.txt")
 
 url = "https://raw.githubusercontent.com/sdg000/pydevops_intro_lab/main/change_me.txt"
 response = requests.get(url)
