@@ -13,7 +13,7 @@ class CdkBasicInfraStack(Stack):
         super().__init__(scope, construct_id, **kwargs)
         
         vpc = ec2.Vpc(
-            self, "MyFirstVPC",
+            self, "ChristiansVPC",
             max_azs=2,
             subnet_configuration=[
                 ec2.SubnetConfiguration(
@@ -25,7 +25,7 @@ class CdkBasicInfraStack(Stack):
         )
         
         instance = ec2.Instance(
-            self, "MyFirstInstance",
+            self, "ChristiansFirstInstance",
             instance_type=ec2.InstanceType("t2.micro"),
             machine_image=ec2.MachineImage.latest_amazon_linux(),
             vpc=vpc,
@@ -33,7 +33,7 @@ class CdkBasicInfraStack(Stack):
         )
         
         bucket = s3.Bucket(
-            self, "MyFirstBucket",
+            self, "ChristiansFirstBucket",
             versioned=True,
             removal_policy=RemovalPolicy.DESTROY
         )
